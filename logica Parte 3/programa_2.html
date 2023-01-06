@@ -1,0 +1,34 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+
+function draw(x, y, color){
+    let screen = document.querySelector("canvas");
+
+    let brush = screen.getContext("2d");
+
+
+    brush.fillStyle = color;
+    brush.fillRect(x,y,50,50);
+    brush.strokeStyle = "black";
+    brush.strokeRect(x,y,50,50);
+}
+
+// let x = 0;
+// while(x <= 600){
+//     draw(x, 0, "red");
+//     draw(x, 50, "yellow");
+//     draw(x, 100, "green");
+//     x += 50;
+// }
+
+for(let i = 0; i <= 600; i += 50){
+     draw(i, 0, "red");
+     draw(i, 50, "yellow");
+     draw(i, 100, "green");
+}
+
+</script>
+

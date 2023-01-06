@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+    let user = "said";
+    let password = "12345";
+
+    for(let i = 1; i <= 3; i++){
+        let user2 = prompt("Enter your username");
+        let password2 = prompt("Enter your password");
+        if(user2 == user && password2 == password){
+            document.write("Login Success");
+            break;
+        }else{
+            alert("username or password do not match");
+        }
+        if(i == 3){
+            alert("Your email will be notified to change your password.");
+        }
+    }
+
+</script>

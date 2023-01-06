@@ -1,0 +1,45 @@
+<canvas height="400" width="600"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas");
+    let brush = screen.getContext("2d");
+    let color = ["blue", "red", "green"];
+    let colorIndex = 0;
+
+    brush.fillStyle = "grey";
+    brush.fillRect(0,0,600,400);
+
+    function displayAlert(event){
+        let x = event.pageX - screen.offsetLeft;
+        let y = event.pageY - screen.offsetTop;
+        console.log(event);
+        alert(x  + "," + y);
+    }
+
+    function draw(){
+        let x = event.pageX - screen.offsetLeft;
+        let y = event.pageY - screen.offsetTop;
+
+        brush.fillStyle = color[colorIndex];
+        brush.beginPath();
+        brush.arc(x,y, 10,0,2*3.14);
+        brush.fill();
+
+        console.log(event);
+    }
+
+    // screen.onclick = displayAlert;
+    screen.onclick = draw;
+
+
+        function alterColor(){
+            colorIndex++;
+            if(colorIndex >= color.length){
+                colorIndex = 0;
+            }
+            return false;
+        }
+
+    screen.oncontextmenu = alterColor;
+
+</script>

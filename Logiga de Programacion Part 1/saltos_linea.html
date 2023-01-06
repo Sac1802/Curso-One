@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAM</h1>
+
+<script>
+
+    function saltarLinea(num){
+        document.write("<br>".repeat(num));
+    }
+
+    function printValue(phrase){
+        document.write(phrase)
+        saltarLinea(3);
+    }
+
+    printValue("Hello World")
+
+    //the code calculates the ages of Juan, Carl and Andrew
+
+    var year = 2025;
+
+    printValue("Juan he is "+ (year - 2000) + " years old");
+
+    printValue("Carl he is "+ (year - 1995) + " years old");
+
+    year = 2030;
+    printValue("Andrew he is "+ (year - 2005) + " years old");
+
+
+
+    function age(num1, num2){
+        let rest = num1 - num2;
+        document.write("Our age difference is: " + rest);
+    }
+
+age(20, 17);
+</script>

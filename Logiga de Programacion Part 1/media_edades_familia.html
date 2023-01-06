@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+
+<script>
+    let integrant = parseInt(prompt("I entered how many family members there are"));
+    var result = 0;
+    for(let i = 1; i <= integrant; i++){
+        let name = prompt("Enter the behalf of family member");
+        let age = parseInt(prompt("Enter the age of " + name));
+        result = result + age;
+        var sumResult = result / integrant;
+    }
+    document.write("the average age of the family is: " + sumResult);
+
+    /**
+     * Nunca se te valla a olvidar que si quieres sumar unos numero que que estan dentro de un loop siempre inicializa la variable afuera del loop 
+     * */
+</script>

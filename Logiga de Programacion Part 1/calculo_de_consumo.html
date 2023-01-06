@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<h3>¿Alcohol o Gasolina? </h3>
+
+<script>
+    function eficiencia(cual,tanque, kilometros){
+        if(cual === "gasolina"){
+            let result = kilometros / tanque;
+            document.write(result + " Kilometros por un litro de gasolina" + "<br>".repeat(3))
+        }else{
+            let result = kilometros / tanque;
+            document.write(result + " Kilometros por un litro de alcohol" + "<br>".repeat(3))
+        }
+    }
+eficiencia("alcohol", 40, 300);
+
+
+function printValue(value){
+    document.write(value);
+}
+
+function IMC(peso, altura){
+
+    return ( peso / (altura * altura));
+
+}
+
+let name = prompt("Inform your name");
+let pesoInfo = prompt(name + ",Inform you peso");
+let heightInfo = prompt(name + ",Inform you height");
+
+let imcCal = IMC(pesoInfo, heightInfo);
+
+printValue("The BMI the "+ name + " is: " + imcCal + "<br>".repeat(3))
+
+if(imcCal < 18.5){
+    document.write("Your BMI is below the recommended");
+}else if(imcCal >= 18.5 && imcCal <= 24.9){
+    document.write("Your BMI is in good condition");
+}else if(imcCal >= 25.0 && imcCal <= 29.9){
+    document.write("According to the BMI Classification you are overweight");
+}else{
+    document.write("According to the BMI Classification you are Obese")
+}
+
+
+
+
+</script>

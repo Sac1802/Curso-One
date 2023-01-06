@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAM</h1>
+
+<H1>PROGRAM</H1>
+
+<script>
+
+    var year = 2025;
+
+    document.write("Juan he is "+ (year - 2000) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Juan he is "+ (year - 1995) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    year = 2030;
+    document.write("Juan he is "+ (year - 2005) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    year = 2020;
+    document.write("Ximena she is "+ (year - 2010) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    document.write("Paola she is "+ (year - 1995) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    document.write("Laura she is "+ (year - 2005) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    var edadXimena = year - 2010;
+    var edadPaola = year - 1995;
+    var edadLaura = year - 2005;
+
+
+    var name1 = "Ximena, ";
+    var name2 = "Paola, ";
+    var name3 = "Laura ";
+
+    var average = (edadLaura + edadPaola + edadLaura) / 3;
+
+    document.write("the average age of: " + name1 + name2 + name3 + "is: " +Math.round(average) + " years old");
+    document.write("<br>");
+    document.write("<br>");
+
+    function num(num){
+        for(let i = 1; i <= 10; i++){
+            let num2 = num * i;
+            document.write(num + " * " + i + " = " + num2 + "<br>");
+        }
+    }
+
+    num(7);
+
+</script>

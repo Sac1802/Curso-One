@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<h1>Multiplication table</h1>
+
+<script>
+    document.write("FOR" + "<br>".repeat(2));
+    function multiplication(num){
+        for(let i = 1; i <= 10; i++){
+            let result = num * i;
+            document.write(num + " * " + i + " = " + result + "<br>");
+        }
+    }
+
+    multiplication(7);
+
+
+    document.write("WHILE" + "<br>".repeat(2));
+    let multiplier = 1;
+    while(multiplier <= 10){
+        document.write(7 + " * " + multiplier + " = " + 7  * multiplier + "<br>");
+        multiplier++;
+    }
+</script>

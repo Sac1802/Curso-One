@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+    var ingredients = [];
+    let quantity = parseInt(prompt("How many ingredients are you going to add?"))
+    for(let i = 1; i <= quantity; i++){
+        let ingredients1 = prompt("How many ingredients are you going to add?");
+        let exist = false;
+        for(let a = 0; a <= ingredients.length; a++){
+            if(ingredients[a] == ingredients1){
+                alert("You have entered a repeated ingredient¡¡");
+                exist = true;
+                break;
+            }
+        }
+        if(exist == false){
+            ingredients.push(ingredients1);
+        }
+    }
+    document.write(ingredients);
+</script>

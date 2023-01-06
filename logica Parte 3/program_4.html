@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas");
+    let brush = screen.getContext("2d");
+    brush.fillStyle = "lightgrey";
+    brush.fillRect(0,0,600,400);
+
+
+    function circumference(x, y, ratio){
+        brush.fillStyle = "blue";
+        brush.beginPath();
+        brush.arc(x, y, ratio,0, 2*Math.PI);
+        brush.fill();
+    }
+
+    function cleanup(){
+        brush.clearRect(0,0,600,400);
+    }
+
+    let x = 0;
+    function update(){
+        cleanup();
+        circumference(x, 20,10);
+        x++;
+        if(x == 620){
+        x = 0;
+    }
+    }
+
+
+
+
+    setInterval(update, 5) ;
+
+
+</script>

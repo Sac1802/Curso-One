@@ -1,0 +1,58 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas");
+    let brush = screen.getContext("2d");
+    brush.fillStyle = "lightgrey";
+    brush.fillRect(0,0,600,400);
+
+    let ratio = 10;
+    let xRandom;
+    let yRandom;
+
+    function circumference(x, y, ratio, color){
+        brush.fillStyle = color;
+        brush.beginPath();
+        brush.arc(x, y, ratio,0, 2*Math.PI);
+        brush.fill();
+    }
+
+    function cleanup(){
+        brush.clearRect(0,0,600,400);
+    }
+
+    function objective(x, y){
+        circumference(x,y, ratio + 20, "red");
+        circumference(x,y, ratio + 10, "white");
+        circumference(x,y, ratio, "red");
+    }
+
+    function position(max){
+        return Math.floor(Math.random()*max);
+    }
+    
+    function update(){
+        cleanup();
+        xRandom = position(600);
+        yRandom = position(400);
+        objective(xRandom, yRandom);
+    }
+
+    setInterval(update, 1000) ;
+
+    function shoot(event){
+        let x = event.pageX - screen.offsetLeft;
+        let y = event.pageY - screen.offsetTop;
+        if((x < xRandom + ratio) && 
+        (x > xRandom - ratio) && 
+        (y < yRandom + ratio) && 
+        (y > yRandom - ratio)){
+            alert("Accurate shot, you hit the target");
+        }
+
+    }
+
+    screen.onclick = shoot;
+
+
+</script>

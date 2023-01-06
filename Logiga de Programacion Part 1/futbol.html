@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAM TO CALCULATE POINTS OF A SOCCER TEAM</h1>
+
+<script>
+    let name = prompt("What your Name?")
+    let wins = parseInt(prompt("How many games has the team won?"));
+    let tie = parseInt(prompt("How many games has the team tie?"));
+
+    let punts =  (wins * 3) + tie;
+
+    document.write("total team points: " + punts  + "<br>".repeat(3));
+    document.write(name + "<br>".repeat(3));
+
+    if(punts > 28){
+        document.write("The team is better than last year");
+    }else if(punts === 28){
+        document.write("The team is the same as last year");
+    }else{
+        document.write("The team is worse than last year");
+    }
+</script>
